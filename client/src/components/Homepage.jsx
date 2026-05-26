@@ -332,7 +332,12 @@ const Homepage = () => {
 
           <div className="border-t border-white/10 mt-16 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-              <div className="text-lg font-semibold text-center md:text-left">
+              <div className="flex items-center gap-4 text-lg font-semibold text-center md:text-left">
+                <img
+                  src="/logo.png"
+                  alt="Teranis logo"
+                  className="h-10 w-auto object-contain"
+                />
                 <p>© 2026 Teranis26. All rights reserved.</p>
               </div>
               <div className="flex space-x-6 justify-center">
