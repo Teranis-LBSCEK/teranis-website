@@ -9,7 +9,6 @@ import Homepage from "./components/Homepage";
 import Navbar from "./components/Navbar";
 import ParticlesComponent from "./components/ParticlesComponent";
 import LoadingScreen from "./components/LoadingScreen";
-import CertificateVerifier from "./components/CertificateVerifier"; // Import Verifier Component
 import Certificates from "./components/Certificates";
 import FlipbookEmbed from "./components/FlipbookEmbed";
 import VerifyRedirect from "./components/VerifyRedirect";
@@ -100,7 +99,6 @@ function App() {
             <Routes>
               <Route path="/" element={<Homepage />} />
               <Route path="/certificates" element={<Certificates />} />
-              <Route path="/certificates/verify" element={<CertificateVerifier />} />
               <Route path="/magazine" element={<FlipbookEmbed />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

@@ -4,6 +4,7 @@ import About from "./About";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
 import { Link as ScrollLink } from "react-scroll";
+import logo from "../assets/logo.png";
 
 /* ── tiny animated counter ── */
 const AnimatedCounter = ({ target, suffix = "" }) => {
@@ -167,7 +168,7 @@ const Homepage = () => {
             className="flex gap-4 mt-10 flex-wrap justify-center z-20"
           >
             <a
-              href="/certificates/verify"
+              href="https://verify.teranis.in"
               className="group relative inline-flex items-center gap-2 px-8 py-3.5 font-semibold text-sm tracking-wide text-black rounded-full bg-white hover:bg-gray-100 transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-white/20 hover:-translate-y-0.5"
             >
               VERIFY CERTIFICATE
@@ -334,7 +335,7 @@ const Homepage = () => {
             <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
               <div className="flex items-center gap-4 text-lg font-semibold text-center md:text-left">
                 <img
-                  src="/logo.png"
+                  src={logo}
                   alt="Teranis logo"
                   className="h-10 w-auto object-contain"
                 />

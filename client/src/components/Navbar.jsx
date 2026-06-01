@@ -8,6 +8,14 @@ const NavItem = ({ to, label, onClick }) => {
   const location = useLocation();
   const isHome = location.pathname === '/';
 
+  if (to.startsWith('http://') || to.startsWith('https://')) {
+    return (
+      <li className="hover:text-cyan-400 transition-colors duration-300 cursor-pointer">
+        <a href={to} onClick={onClick}>{label}</a>
+      </li>
+    );
+  }
+
   if (to.startsWith('/')) {
     return (
       <li className="hover:text-cyan-400 transition-colors duration-300 cursor-pointer">
@@ -63,7 +71,7 @@ const Navbar = () => {
           <NavItem to="about" label="ABOUT" />
           <NavItem to="events" label="EVENTS" />
           <NavItem to="contact" label="CONTACT US" />
-          <NavItem to="/certificates/verify" label="VERIFY CERTIFICATE" />
+          <NavItem to="https://verify.teranis.in" label="VERIFY CERTIFICATE" />
           <NavItem to="/certificates" label="CERTIFICATES" />
         </ul>
       </div>
@@ -77,7 +85,7 @@ const Navbar = () => {
           <NavItem to="about" label="ABOUT" onClick={toggleMenu} />
           <NavItem to="events" label="EVENTS" onClick={toggleMenu} />
           <NavItem to="contact" label="CONTACT US" onClick={toggleMenu} />
-          <NavItem to="/certificates/verify" label="VERIFY CERTIFICATE" onClick={toggleMenu} />
+          <NavItem to="https://verify.teranis.in" label="VERIFY CERTIFICATE" onClick={toggleMenu} />
           <NavItem to="/certificates" label="CERTIFICATES" onClick={toggleMenu} />
         </ul>
       </div>
